@@ -3,17 +3,21 @@ import {BrowserRouter, Routes , Route} from 'react-router-dom'
 import About from './Pages/About';
 import Home from './Pages/Home';
 import Dashboard from './Pages/Dashboard';
-import SingIn from './Pages/SingIn';
+import SignIn from './Pages/SignIn';
+import Header from './Components/Header';
+import Projects from './Pages/Projects';
+import SignUp from './Pages/SignUp';
 
 const App = () => {
   return (
     <BrowserRouter>
+    <Header/>
        <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/dashboard' element={<Dashboard/>}/>
-           <Route path='/signin' element={<SingIn/>}/>
-           <Route path='/signup' element={<SingUp/>}/>
+           <Route path='/signin' element={<SignIn/>}/>
+           <Route path='/signup' element={<SignUp/>}/>
            <Route path='/projects' element={<Projects/>}/>
         </Routes>   
     </BrowserRouter>
